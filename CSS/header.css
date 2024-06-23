@@ -1,0 +1,100 @@
+header {
+    margin: 0 auto;
+    width: 1564px;
+    height: 72px;
+    background: #FFF;
+    border-radius: 70px;
+    justify-content: space-between;
+}
+
+.logo {
+    margin-left: 32px;
+}
+
+.nav {
+    width: 663px;
+    height: 63px;
+    font: normal normal bold 14px/19px Manrope;
+    margin-left: 37px;
+}
+
+.nav .items {
+    justify-content: space-between;
+    height: 100%;
+}
+
+.nav .items .item_Overview p,
+.nav .items .item_Patients p,
+.nav .items .item_Schedule p,
+.nav .items .item_Message p,
+.nav .items .item_Transactions p   {
+    color: #072635;
+}
+
+.nav .items .item_Patients {
+    width: 122px;
+    height: 41px;
+    background: #01F0D0;
+    border-radius: 41px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav .items .item_Patients:hover {
+    opacity: 0.8;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+}
+
+.nav .items .item_Overview p img,
+.nav .items .item_Patients p img {
+    margin-right: 9px;
+}
+
+.nav .items .item_Schedule p img,
+.nav .items .item_Message p img,
+.nav .items .item_Transactions p img {
+    margin-right: 8px;
+}
+
+.dr {
+    width: 242px;
+    height: 44px;
+    font: normal normal bold 14px/19px Manrope;
+    margin-right: 32px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.dr img:first-of-type {
+    width: 44px;
+    height: 44px;
+    margin-right: 8px;
+}
+
+.dr .content .position {
+    font: normal normal normal 14px/19px Manrope;
+    color: #707070;
+}
+
+.dr .properties {
+    display: flex;
+    justify-content: center;
+}
+
+.dr .properties .vertical_line {
+    width: 1px;
+    height: 44px;
+    background: #EDEDED;
+    margin: 0 12px;
+}
+
+.dr .properties img:first-of-type {
+    width: 19px;
+    height: 20px;
+    margin-right: 12px;
+}
+
+.dr .properties img:last-child {
+    width: 4px;
+    height: 18px;
+}

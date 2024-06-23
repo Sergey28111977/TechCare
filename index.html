@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coalition</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/main.css">
+</head>
+<body>
+    <div class="page">
+
+        <header class="align-items_center">
+            <div class="logo">
+                <img src="./image/Logo.svg" alt="Logo">
+            </div>
+
+            <div class="nav">
+                <div class="items align-items_center">
+                    <a href="#" class="item_Overview">
+                        <p class="align-items_center">
+                            <img src="./image/icon/home.svg" alt="home">
+                            Overview
+                        </p>
+                    </a>
+                    <a href="#" class="item_Patients">
+                        <p class="align-items_center">
+                            <img src="./image/icon/group.svg" alt="group">
+                            Patients
+                        </p>
+                    </a>
+                    <a href="#" class="item_Schedule">
+                        <p class="align-items_center">
+                            <img src="./image/icon/calendar.svg" alt="calendar">
+                            Schedule
+                        </p>
+                    </a>
+                    <a href="#" class="item_Message">
+                        <p class="align-items_center">
+                            <img src="./image/icon/chat.svg" alt="chat">
+                            Message
+                        </p>
+                    </a>
+                    <a href="#" class="item_Transactions">
+                        <p class="align-items_center">
+                            <img src="./image/icon/credit.svg" alt="credit">
+                            Transactions
+                        </p>
+                    </a>
+                </div>
+            </div>
+
+            <div class="dr"> 
+                <div class="align-items_center">              
+                    <img src="./image/doctor.png" alt="doctor">
+                    <div class="content">
+                        <div class="name">
+                            Dr. Jose Simmons
+                        </div>
+                        <div class="position">
+                            General Practitioner
+                        </div>
+                    </div>
+                </div> 
+                
+                <div class="properties align-items_center">
+                    <div class="vertical_line"></div>
+                    <img src="./image/icon/settings.png" alt="settings">
+                    <img src="./image/icon/more_vert.png" alt="more">
+                </div>
+                
+            </div>
+        </header>
+
+        <main>
+            <div class="list_patients">
+                <h2 class="title" id="top">Patients
+                    <input type="text" id="text">
+                    <img id="search" src="./image/icon/search.png" alt="search">
+                </h2>
+                <div>
+                    <div id="result"></div>
+                </div>
+                <div class="items" id="authors"></div>
+            </div>
+
+            <div class="diagnosis">
+                <div class="history">
+                    <h2>Diagnosis History</h2>
+                    <div class="diagram">
+                        <div class="part">
+                            <div class="diagram_title">
+                                <div class="title">Blood Pressure</div>
+                                <select onchange="onSelectChange(event)">
+                                    <option value="6" class="menu">Last 6 months</option>
+                                    <option value="12">Last 12 months</option>
+                                  </select>
+                                
+                            </div>
+
+                            <div class="myChart">
+                                <canvas id="myChart"></canvas>
+                            </div>
+                        </div>
+
+                        <div class="items">
+                            <div class="item">
+                                <div class="title align-items_center">
+                                    <div class="circle_1"></div>
+                                    <span>Systolic</span>
+                                </div>
+                                <div class="blood_pressure" id="Systolic"></div>
+                                <div class="levels align-items_center">
+                                    <img src="./image/icon/ArrowUp.svg" alt="ArrowUp">
+                                    Higher than Average
+                                </div>
+                            </div>
+                            <div class="horizontal_line"></div>
+                            <div class="item">
+                                <div class="title align-items_center">
+                                    <div class="circle_2"></div>
+                                    <span>Diastolic</span>
+                                </div>
+                                <div class="blood_pressure" id="Diastolic"></div>
+                                <div class="levels align-items_center">
+                                    <img src="./image/icon/ArrowDown.svg" alt="ArrowUp">
+                                    Lower than Average
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="block">
+                        <div class="respiratory_rate">
+                            <img src="./image/respiratory_rate.png" alt="respiratory_rate">
+                            <div class="title">
+                                Respiratory Rate
+                            </div>
+                            <div class="meaning" id="respiratory_rate_value"></div>
+                            <div class="text" id="respiratory_rate_levels">
+                                Normal
+                            </div>
+                        </div>
+                        <div class="temperature">
+                            <img src="./image/temperature.png" alt="temperature">
+                            <div class="title">
+                                Temperature
+                            </div>
+                            <div class="meaning" id="temperature_value"></div>
+                            <div class="text" id="temperature_levels"></div>
+                        </div>
+                        <div class="heart_rate">
+                            <img src="./image/HeartBPM.png" alt="HeartBPM">
+                            <div class="title">
+                                Heart Rate
+                            </div>
+                            <div class="meaning" id="heart_rate_value"></div>
+                            <div class="text align-items_center">
+                                <img src="./image/icon/ArrowDown.svg" alt="ArrowDown">
+                                <span id="heart_rate_levels"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="list">
+                    <h2>Diagnostic List</h2>
+                    
+                        <div class="title align-items_center">
+                            <div class="problem">
+                                Problem/Diagnosis
+                            </div>
+                            <div class="description">
+                                Description
+                            </div>
+                            <div class="status">
+                                Status
+                            </div>
+                        </div>
+                    <div class="table_line" id="table_line"></div>
+                </div>
+            </div>
+
+            <div class="lab">
+                <div class="patients">
+                    <div class="picture" id="profile_picture"><img src="" alt=""></div>
+
+                    <h2 class="name" id="name"></h2>
+
+                    <div class="items">
+                        <div class="item align-items_center">
+                            <img src="./image/icon/BirthIcon.svg" alt="BirthIcon">
+                            <div>
+                                <p>Date Of Birth</p>
+                                <p id="date_of_birth"></p>
+                            </div>
+                        </div>
+                        <div class="item align-items_center">
+                            <img src="./image/icon/FemaleIcon.svg" alt="FemaleIcon">
+                            <div>
+                                <p>Gender</p>
+                                <p id="gender"></p>
+                            </div>
+                        </div>
+                        <div class="item align-items_center">
+                            <img src="./image/icon/PhoneIcon.svg" alt="PhoneIcon">
+                            <div>
+                                <p>Contact Info.</p>
+                                <p id="phone_number"></p>
+                            </div>
+                        </div>
+                        <div class="item align-items_center">
+                            <img src="./image/icon/PhoneIcon.svg" alt="PhoneIcon">
+                            <div>
+                                <p>Emergency Contacts</p>
+                                <p id="emergency_contact"></p>
+                            </div>
+                        </div>
+                        <div class="item align-items_center">
+                            <img src="./image/icon/InsuranceIcon.svg" alt="InsuranceIcon">
+                            <div>
+                                <p>Insurance Provider</p>
+                                <p id="insurance_type"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button>Show All Information</button>
+                </div>
+                <div class="results">
+                    <h2 class="title">Lab Results</h2>
+                    <div class="items" id="lab"></div>
+                </div>
+            </div>
+        </main>
+    
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
